@@ -1,0 +1,66 @@
+<mat-drawer-container class="example-container">
+    <div class="side-header">
+        <div>
+            <img class="img-center" src="../../../assets/5dSVGFill.svg">
+        </div>
+    </div>
+    <div class="profile">Profile</div>
+    <div class="list">
+    </div>
+    <div class="list-in"> Moment</div>
+    <div class="list-dot"></div>
+    <div class="moment-list-side" (click)="onMomentList()">Moment List</div>
+    <div class="add-dot"></div>
+    <div class="add-new-side">Add New Moment</div>
+</mat-drawer-container>
+<div class="top-wrap"></div>
+<div class="logout" (click)="onClickLogOut()">Logout</div>
+<div class="moment-content-wrap"></div>
+<div *ngIf="!momentID" class="moment-content">Add New Moment</div>
+<div *ngIf="momentID" class="moment-content">Edit Moment</div>
+<div class="table-container">
+    <div class="">
+        <form [formGroup]="momentForm">
+            <div class="">
+                <div class="title-pos">
+                    <p style="margin-bottom:1.5cm;"></p>
+                    <mat-form-field>
+                        <mat-label>Title</mat-label>
+                        <input formControlName="title" class="input-txt" matInput placeholder="" autocomplete="off">
+                        <mat-icon matSuffix><span class="material-icons">
+                                label
+                            </span></mat-icon>
+                    </mat-form-field>
+                </div>
+                <p style="margin-bottom:1.5cm;"></p>
+                <div class="tags-pos">
+                    <mat-form-field>
+                        <mat-label>Tags</mat-label>
+                        <input formControlName="tags" class="input-txt" matInput placeholder="" autocomplete="off">
+                        <mat-icon matSuffix><span class="material-icons">
+                                tag
+                            </span></mat-icon>
+                    </mat-form-field>
+                </div>
+                <p style="margin-bottom:1.5cm;"></p>
+                <div class="file-pos">
+                    <mat-form-field (click)="imgFileInput.click()">
+                        <mat-label>Image</mat-label>
+                        <input formControlName="image" readonly matInput placeholder="">
+                        <mat-icon matSuffix><span class="material-icons">
+                                unarchive
+                            </span></mat-icon>
+                    </mat-form-field>
+                    <input hidden type="file" readonly #imgFileInput (change)="uploadImage($event)" />
+                </div>
+            </div>
+            <p style="margin-bottom:1.5cm;"></p>
+            <div class="center">
+                <button *ngIf="!momentID" class="submitbtn" (click)="onSubmit()"><span
+                        class="btntxt">Submit</span></button>
+                <button *ngIf="momentID" class="submitbtn" (click)="onEdit()"><span
+                        class="btntxt">Edit</span></button>
+            </div>
+        </form>
+    </div>
+</div>

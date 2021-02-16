@@ -1,0 +1,113 @@
+.row{
+    margin-right: 0px;
+}
+
+.submitbtn{
+position: 'absolute';
+width: 184px;
+height: 50px;
+left: 591px;
+top: 648px;
+background: #001B30;
+border-radius: 25px;
+padding: 10px 32px;
+margin: auto;
+}
+
+.center {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.btntxt{
+position: 'absolute';
+width: 68px;
+height: 24px;
+left: 649px;
+top: 661px;
+font-family:'Maven Pro';
+font-style: 'normal';
+font-weight: 'bold';
+font-size: 20px;
+line-height: 23px;
+color: #FFFFFF;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-up{
+position: 'absolute';
+width: 147px;
+height: 47px;
+left: 609px;
+top: 213px;
+font-family: 'Maven Pro';
+font-style: 'normal';
+font-weight: 'bold';
+font-size: 40px;
+line-height: 47px;
+color: #001B30;
+}
+
+.sign-up-txt{
+    position: 'absolute';
+    width: 148px;
+    height: 24px;
+    left: 609px;
+    top: 271px;
+    font-family: 'Maven Pro';
+    font-style: 'normal';
+    font-weight: 'bold';
+    font-size: 20px;
+    line-height: 23px;
+    color: #001B30;
+}
+
+.sign-up-txt-in{
+
+    position: 'absolute';
+    width: 240px;
+    height: 24px;
+    left: 609px;
+    top: 271px;
+    font-family: 'Maven Pro';
+    font-style: 'normal';
+    font-weight: 'bold';
+    font-size: 20px;
+    line-height: 23px;
+    color: #001B30;  
+}
+
+.login-full-width {
+    width: 100%;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 1px !important;
+}
+
+.input-txt
+{
+    height: 55px; 
+    line-height: 15px;
+}
+
+.mat-form-field{
+    width: 372px;
+}

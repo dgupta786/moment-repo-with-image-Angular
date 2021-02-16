@@ -1,0 +1,93 @@
+<div class="header">
+    <div>
+        <img class="img-center" src="../../../assets/5dSVG.svg">
+    </div>
+</div>
+&nbsp;
+<div class="center">
+    <div class="sign-up">Sign Up</div>
+</div>
+<div class="center">
+    <div class="sign-up-txt">To be a member</div>
+</div>
+<p style="margin-bottom:1cm;"></p>
+
+<div class="center">
+    <form [formGroup]="userForm">
+        <div class="">
+            <div class="mat-form-field--inline">
+                <mat-form-field>
+                    <mat-label>First Name</mat-label>
+                    <input formControlName="firstName" class="input-txt" matInput>
+                    <mat-icon matSuffix><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg></mat-icon>
+                </mat-form-field>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input formControlName="lastName" class="input-txt" matInput placeholder="">
+                    <mat-icon matSuffix><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg></mat-icon>
+                </mat-form-field>
+            </div>
+            <p style="margin-bottom:1.5cm;"></p>
+            <div class="mat-form-field--inline">
+                <mat-form-field>
+                    <mat-label>Mobile No.</mat-label>
+                    <input formControlName="mobile" class="input-txt" matInput placeholder="">
+                    <mat-icon matSuffix><span class="material-icons">
+                            contact_page
+                        </span></mat-icon>
+                </mat-form-field>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <mat-form-field>
+                    <mat-label>Email ID</mat-label>
+                    <input formControlName="email" class="input-txt" matInput placeholder="">
+                    <mat-icon matSuffix><span class="material-icons">
+                            email
+                        </span></mat-icon>
+                </mat-form-field>
+            </div>
+            <p style="margin-bottom:1.5cm;"></p>
+            <div class="mat-form-field--inline">
+                <mat-form-field>
+                    <mat-label>City</mat-label>
+                    <input formControlName="city" class="input-txt" matInput placeholder="">
+                    <mat-icon matSuffix><span class="material-icons">
+                            account_balance
+                        </span></mat-icon>
+                </mat-form-field>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" type="password" class="input-txt" matInput placeholder=""
+                        autocomplete="off">
+                    <mat-icon matSuffix><span class="material-icons">
+                            lock
+                        </span></mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>
+
+<p style="margin-bottom:1.5cm;"></p>
+<div class="center">
+    <button class="submitbtn " (click)="onSave()"><span class="btntxt">Submit</span></button>
+</div>
+<p style="margin-bottom:0.5cm;"></p>
+<div class="center">
+    <div class="sign-up-txt-in">Already A Member? <a [routerLink]="['/login']" routerLinkActive="active">Sign In</a>
+    </div>
+</div>

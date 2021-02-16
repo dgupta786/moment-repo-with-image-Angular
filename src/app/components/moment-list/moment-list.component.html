@@ -1,0 +1,48 @@
+<mat-drawer-container class="example-container">
+  <div class="side-header">
+    <div>
+      <img class="img-center" src="../../../assets/5dSVGFill.svg">
+    </div>
+  </div>
+  <div class="profile">Profile</div>
+  <div class="list">
+  </div>
+  <div class="list-in"> Moment</div>
+  <div class="list-dot"></div>
+  <div class="moment-list-side">Moment List</div>
+  <div class="add-dot"></div>
+  <div class="add-new-side" (click)="onAddNewMoment()">Add New Moment</div>
+</mat-drawer-container>
+<div class="top-wrap"></div>
+<div class="logout" (click)="onClickLogOut()">Logout</div>
+<div class="moment-content-wrap"></div>
+<div class="moment-content">Moments</div>
+<div class="table-container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Sr. No.</th>
+        <th scope="col">Image</th>
+        <th scope="col">Title</th>
+        <th scope="col">Tag</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of momentList; let i = index;">
+        <td> {{i+1}}</td>
+        <td><img [src]="loadImage(item.image)" class="rounded" />
+        </td>
+        <td>{{item.title}}</td>
+        <td>{{item.tags}}</td>
+        <td><span style="cursor: pointer;" class="material-icons">
+            <a [routerLink]="['/new-moment']" [queryParams]="{id: item._id}">create</a>
+          </span></td>
+        <td (click)="onDeleteMoment(item._id)"><span style="cursor: pointer;" class="material-icons">
+            delete_outline
+          </span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

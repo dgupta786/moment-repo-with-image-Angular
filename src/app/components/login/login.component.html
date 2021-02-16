@@ -1,0 +1,47 @@
+<div class="header">
+    <div>
+        <img class="img-center" src="../../../assets/5dSVG.svg">
+    </div>
+</div>
+&nbsp;
+<div class="center">
+    <div class="sign-up">Sign In</div>
+</div>
+<div class="center">
+    <div class="sign-up-txt">To start using the app</div>
+</div>
+<p style="margin-bottom:1cm;"></p>
+
+<div class="center">
+    <form [formGroup]="userForm">
+        <div class="">
+            <div class="">
+                <mat-form-field>
+                    <mat-label>Email ID</mat-label>
+                    <input formControlName="email" class="input-txt" matInput placeholder="">
+                    <mat-icon matSuffix><span class="material-icons">
+                            email
+                        </span></mat-icon>
+                </mat-form-field>
+            </div>
+            <p style="margin-bottom:1.5cm;"></p>
+            <div class="">
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" type="password" class="input-txt" matInput placeholder="">
+                    <mat-icon matSuffix><span class="material-icons">
+                            lock
+                        </span></mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>
+<p style="margin-bottom:1.5cm;"></p>
+<div class="center">
+    <button class="submitbtn" (click)="onSubmit()"><span class="btntxt">Submit</span></button>
+</div>
+<p style="margin-bottom:0.5cm;"></p>
+<div class="center">
+    <div class="sign-up-txt-in">Not A Member? <a [routerLink]="['/']" routerLinkActive="active">Sign Up</a></div>
+</div>
